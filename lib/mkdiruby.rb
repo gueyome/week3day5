@@ -22,7 +22,7 @@ def create_folder
     readme = File.open("#{folder_name}/Readme.md","a+")
     readme.puts("Ceci est un programme Ruby")
 
-    Dir.chdir("/Users/mycuistot/Downloads/#{folder_name}") #do
+    Dir.chdir(Dir.pwd+"/"+"#{folder_name}") #do
         system("bundle install")
         system("git init")
         system("rspec --init")
@@ -31,5 +31,6 @@ def create_folder
 end
 
 create_folder
+
 
 
